@@ -37,3 +37,6 @@ concat = Concatenate()([conv_1, conv_2, conv_3, conv_4])
 flat = Flatten()(concat)
 # Defining the output layer
 out_ = Dense(units=4, activation="softmax")(flat)
+
+# Creating the model
+pl_net = Model(inputs=[input_], outputs=[out_], name="pl_net")
