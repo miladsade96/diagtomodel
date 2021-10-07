@@ -40,3 +40,7 @@ out_ = Dense(units=4, activation="softmax")(flat)
 
 # Creating the model
 pl_net = Model(inputs=[input_], outputs=[out_], name="pl_net")
+
+
+if __name__ == '__main__':
+    pl_net.summary()
