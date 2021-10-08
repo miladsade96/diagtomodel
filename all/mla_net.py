@@ -45,3 +45,8 @@ conv_13 = Conv2D(filters=80, kernel_size=(3, 3), strides=(1, 1), activation=relu
 conv_14 = Conv2D(filters=80, kernel_size=(1, 1), strides=(1, 1), activation=relu, padding="same")(fourth_pool)
 conv_15 = Conv2D(filters=80, kernel_size=(3, 3), strides=(1, 1), activation=relu, padding="same")(conv_13)
 fifth_add = Add()([conv_14, conv_15])
+
+fifth_pool = MaxPooling2D(pool_size=(3, 3), strides=2)(fifth_add)
+gap = GlobalAvgPool2D()(fifth_pool)
+flat = Flatten()(gap)
+output_layer = Dense(units=2, activation=softmax)(flat)
