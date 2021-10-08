@@ -38,3 +38,10 @@ conv_10 = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), activation=relu
 conv_11 = Conv2D(filters=64, kernel_size=(1, 1), strides=(1, 1), activation=relu, padding="same")(third_pool)
 conv_12 = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), activation=relu, padding="same")(conv_10)
 fourth_add = Add()([conv_11, conv_12])
+
+fourth_pool = MaxPooling2D(pool_size=(3, 3), strides=2)(fourth_add)
+# Defining convolutional layers up to fifth addition
+conv_13 = Conv2D(filters=80, kernel_size=(3, 3), strides=(1, 1), activation=relu, padding="same")(fourth_pool)
+conv_14 = Conv2D(filters=80, kernel_size=(1, 1), strides=(1, 1), activation=relu, padding="same")(fourth_pool)
+conv_15 = Conv2D(filters=80, kernel_size=(3, 3), strides=(1, 1), activation=relu, padding="same")(conv_13)
+fifth_add = Add()([conv_14, conv_15])
