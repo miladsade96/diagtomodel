@@ -53,3 +53,7 @@ output_layer = Dense(units=2, activation=softmax)(flat)
 
 # Creating the model
 mla_net = Model(inputs=[input_layer], outputs=[output_layer])
+
+
+if __name__ == '__main__':
+    mla_net.summary()
