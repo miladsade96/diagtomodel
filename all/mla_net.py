@@ -50,3 +50,6 @@ fifth_pool = MaxPooling2D(pool_size=(3, 3), strides=2)(fifth_add)
 gap = GlobalAvgPool2D()(fifth_pool)
 flat = Flatten()(gap)
 output_layer = Dense(units=2, activation=softmax)(flat)
+
+# Creating the model
+mla_net = Model(inputs=[input_layer], outputs=[output_layer])
