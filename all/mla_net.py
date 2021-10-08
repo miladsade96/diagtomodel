@@ -11,3 +11,9 @@ from tensorflow.keras.layers import Conv2D, Dense, Input, GlobalAvgPool2D, Flatt
 
 # Defining the input layer
 input_layer = Input(shape=(720, 720, 3))
+
+# Defining convolutional layers up to first addition
+conv_1 = Conv2D(filters=16, kernel_size=(3, 3), strides=(2, 2), activation=relu, padding="same")(input_layer)
+conv_2 = Conv2D(filters=16, kernel_size=(1, 1), strides=(4, 4), activation=relu, padding="same")(input_layer)
+conv_3 = Conv2D(filters=16, kernel_size=(3, 3), strides=(2, 2), activation=relu, padding="same")(conv_1)
+first_add = Add()([conv_2, conv_3])
