@@ -7,3 +7,7 @@
 from tensorflow.keras.models import Model
 from tensorflow.keras.activations import tanh, softmax
 from tensorflow.keras.layers import Input, Conv2D, AveragePooling2D, Dense, Flatten
+
+
+# Defining the input layer
+input_layer = Input(shape=(32, 32, 1))
