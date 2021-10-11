@@ -1,6 +1,7 @@
 ![](logo.png)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/everlookneversee/diag2model/badge)](https://www.codefactor.io/repository/github/everlookneversee/diag2model)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/EverLookNeverSee/diag2model/main)
 ![GitHub language count](https://img.shields.io/github/languages/count/EverLookNeverSee/diag2model)
 ![GitHub top language](https://img.shields.io/github/languages/top/EverLookNeverSee/diag2model)
