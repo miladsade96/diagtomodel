@@ -19,3 +19,7 @@
 ## Authors
 * Milad Sadeghi DM - [EverlookNeverSee@GitHub](https://github.com/EverLookNeverSee)
 * List of [all contributors](https://github.com/EverLookNeverSee/diag2model/graphs/contributors) to this repository
+
+## Implemented Models
+* [PLNet](all/pl_net.py) - Convolutional Neural Network with Parallel Layers
+* [MLANet](all/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
