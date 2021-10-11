@@ -15,3 +15,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/EverLookNeverSee/diag2model)
 
 ### Implementations of Artificial Neural Networks Based on their Diagrams
+
+## Authors
+* Milad Sadeghi DM - [EverlookNeverSee@GitHub](https://github.com/EverLookNeverSee)
+* List of [all contributors](https://github.com/EverLookNeverSee/diag2model/graphs/contributors) to this repository
