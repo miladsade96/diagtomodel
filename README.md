@@ -2,7 +2,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/everlookneversee/diag2model/badge)](https://www.codefactor.io/repository/github/everlookneversee/diag2model)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/EverLookNeverSee/diag2model/main)
+[![CodeQL](https://github.com/EverLookNeverSee/diag2model/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/EverLookNeverSee/diag2model/actions/workflows/codeql-analysis.yml)
 ![GitHub language count](https://img.shields.io/github/languages/count/EverLookNeverSee/diag2model)
 ![GitHub top language](https://img.shields.io/github/languages/top/EverLookNeverSee/diag2model)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/EverLookNeverSee/diag2model)
