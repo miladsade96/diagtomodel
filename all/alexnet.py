@@ -23,3 +23,7 @@ model.add(Flatten())
 model.add(Dense(units=4096, activation=relu))
 model.add(Dense(units=4096, activation=relu))
 model.add(Dense(units=1000, activation=softmax))
+
+
+if __name__ == '__main__':
+    model.summary()
