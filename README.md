@@ -24,3 +24,5 @@
 * [PLNet](all/pl_net.py) - Convolutional Neural Network with Parallel Layers
 * [MLANet](all/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
 * [LeNet-5](all/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
+* [AlexNet](all/alexnet.py) - ImageNet Classification with Deep Convolutional
+Neural Networks
