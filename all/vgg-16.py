@@ -17,3 +17,8 @@ input_layer = Input(shape=(224, 224, 3))
 conv_1 = Conv2D(filters=64, kernel_size=(3, 3), activation=relu, padding="same")(input_layer)
 conv_2 = Conv2D(filters=64, kernel_size=(3, 3), activation=relu, padding="same")(conv_1)
 pooling_1 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2))(conv_2)
+
+# Defining second conv block
+conv_3 = Conv2D(filters=128, kernel_size=(3, 3), activation=relu, padding="same")(pooling_1)
+conv_4 = Conv2D(filters=128, kernel_size=(3, 3), activation=relu, padding="same")(conv_3)
+pooling_2 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2))(conv_4)
