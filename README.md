@@ -26,3 +26,4 @@
 * [LeNet-5](all/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
 * [AlexNet](all/alexnet.py) - ImageNet Classification with Deep Convolutional
 Neural Networks
+* [VGG-16](all/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
