@@ -46,3 +46,9 @@ flat = Flatten()(pooling_5)
 d_1 = Dense(units=4096, activation=relu)(flat)
 d_2 = Dense(units=4096, activation=relu)(d_1)
 output_layer = Dense(units=1000, activation=softmax)(d_2)
+
+# Model Creation
+model = Model(inputs=[input_layer], outputs=[output_layer], name="VGG-16")
+
+if __name__ == '__main__':
+    model.summary()
