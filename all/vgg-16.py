@@ -34,3 +34,9 @@ conv_8 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same"
 conv_9 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same")(conv_8)
 conv_10 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same")(conv_9)
 pooling_4 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2))(conv_10)
+
+# Defining fifth conv block
+conv_11 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same")(pooling_4)
+conv_12 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same")(conv_11)
+conv_13 = Conv2D(filters=512, kernel_size=(3, 3), activation=relu, padding="same")(conv_12)
+pooling_5 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2))(conv_13)
