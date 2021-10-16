@@ -8,3 +8,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.activations import relu, softmax
 from tensorflow.keras.layers import (Conv2D, Dense, Flatten, AveragePooling2D, MaxPooling2D,
                                      Input, Concatenate)
+
+
+# Defining the input layer
+input_layer = Input(shape=(224, 224, 3))
