@@ -10,6 +10,30 @@ from tensorflow.keras.layers import (Conv2D, Dense, Flatten, AveragePooling2D, M
                                      Input, Concatenate)
 
 
+def build_inception_module(pl, nf_11: int, nf_33_r: int, nf_55_r: int, nf_33: int,
+                           nf_55: int, nf_pp: int) -> Concatenate:
+    """
+    This function builds inception module which is mentioned in the model diagram
+    :param pl: previous layer
+    :param nf_11: number of filters in 1x1 convolutional layer
+    :param nf_33_r: number of filters (dimension reduction)
+    :param nf_55_r: number of filters (dimension reduction)
+    :param nf_33: number of filters in 3x3 convolutional layer
+    :param nf_55: number of filters in 5x5 convolutional layer
+    :param nf_pp: number of filters in pool proj layer
+    :return: concatenated layer
+    """
+    conv_11 = Conv2D(filters=nf_11, kernel_size=(1, 1), activation=relu, padding="same")(pl)
+    conv_33_r = Conv2D(filters=nf_33_r, kernel_size=(1, 1), activation=relu, padding="same")(pl)
+    conv_55_r = Conv2D(filters=nf_55_r, kernel_size=(1, 1), activation=relu, padding="same")(pl)
+    mp = MaxPooling2D(pool_size=(3, 3), strides=(1, 1), padding="same")(pl)
+    conv_33 = Conv2D(filters=nf_33, kernel_size=(3, 3), activation=relu, padding="same")(conv_33_r)
+    conv_55 = Conv2D(filters=nf_55, kernel_size=(5, 5), activation=relu, padding="same")(conv_55_r)
+    pool_proj = Conv2D(filters=nf_pp, kernel_size=(1, 1), activation=relu, padding="same")(mp)
+    concat = Concatenate()([conv_11, conv_33, conv_55, pool_proj])
+    return concat
+
+
 # Defining the input layer
 input_layer = Input(shape=(224, 224, 3))
 
