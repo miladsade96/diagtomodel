@@ -48,3 +48,8 @@ mp_2 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(conv_3)
 inc_1 = build_inception_module(mp_2, 64, 96, 16, 128, 32, 32)
 # Defining inception module number 2
 inc_2 = build_inception_module(inc_1, 128, 128, 32, 192, 96, 64)
+
+mp_3 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(inc_2)
+
+# Defining inception module number 3
+inc_3 = build_inception_module(mp_3, 192, 96, 16, 208, 48, 64)
