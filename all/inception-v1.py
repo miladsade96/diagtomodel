@@ -83,3 +83,7 @@ output_2 = Dense(units=10, activation=softmax, name="Second Output")
 inc_7 = build_inception_module(inc_6, 256, 160, 32, 320, 128, 128)
 # Max pooling
 mp_4 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(inc_7)
+
+# Defining double inception modules
+inc_8 = build_inception_module(mp_4, 256, 160, 32, 320, 128, 128)
+inc_9 = build_inception_module(inc_8, 384, 192, 48, 384, 128, 128)
