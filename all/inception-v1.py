@@ -93,3 +93,6 @@ inc_9 = build_inception_module(inc_8, 384, 192, 48, 384, 128, 128)
 gap_1 = GlobalAveragePooling2D()(inc_9)
 do_3 = Dropout(rate=0.4)(gap_1)
 output_3 = Dense(units=10, activation=softmax, name="ThirdOutput")(do_3)
+
+# Creating the model
+model = Model(inputs=[input_layer], outputs=[output_1, output_2, output_3], name="Inception-v1")
