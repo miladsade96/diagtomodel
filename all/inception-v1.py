@@ -7,7 +7,7 @@
 from tensorflow.keras.models import Model
 from tensorflow.keras.activations import relu, softmax
 from tensorflow.keras.layers import (Conv2D, Dense, Flatten, AveragePooling2D, MaxPooling2D,
-                                     Input, Concatenate)
+                                     Input, Concatenate, Dropout)
 
 
 def build_inception_module(pl, nf_11: int, nf_33_r: int, nf_55_r: int, nf_33: int,
@@ -53,3 +53,13 @@ mp_3 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(inc_2)
 
 # Defining inception module number 3
 inc_3 = build_inception_module(mp_3, 192, 96, 16, 208, 48, 64)
+
+# Implementing first output branch
+# Average pool
+ap_1 = AveragePooling2D(pool_size=(5, 5), strides=3)(inc_3)
+conv_4 = Conv2D(filters=128, kernel_size=(1, 1), activation=relu, padding="same")(ap_1)
+flat_1 = Flatten()(conv_4)
+# fully connected layer
+fcl_1 = Dense(units=1024, activation=relu)(flat_1)
+do_1 = Dropout(rate=0.7)(fcl_1)
+output_1 = Dense(units=10, activation=softmax, name="First Output")
