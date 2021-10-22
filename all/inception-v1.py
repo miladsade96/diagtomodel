@@ -96,3 +96,7 @@ output_3 = Dense(units=10, activation=softmax, name="ThirdOutput")(do_3)
 
 # Creating the model
 model = Model(inputs=[input_layer], outputs=[output_1, output_2, output_3], name="Inception-v1")
+
+
+if __name__ == '__main__':
+    model.summary()
