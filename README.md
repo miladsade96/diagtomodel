@@ -27,3 +27,4 @@
 * [AlexNet](all/alexnet.py) - ImageNet Classification with Deep Convolutional
 Neural Networks
 * [VGG-16](all/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
+* [Inception-v1](all/inception-v1.py) - Going Deeper With Convolutions
