@@ -63,3 +63,8 @@ flat_1 = Flatten()(conv_4)
 fcl_1 = Dense(units=1024, activation=relu)(flat_1)
 do_1 = Dropout(rate=0.7)(fcl_1)
 output_1 = Dense(units=10, activation=softmax, name="First Output")
+
+# Defining triple inception modules
+inc_4 = build_inception_module(inc_3, 160, 112, 24, 224, 64, 64)
+inc_5 = build_inception_module(inc_4, 128, 128, 24, 265, 64, 64)
+inc_6 = build_inception_module(inc_5, 112, 144, 32, 288, 64, 64)
