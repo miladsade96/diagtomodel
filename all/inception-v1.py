@@ -78,3 +78,8 @@ flat_2 = Flatten()(conv_5)
 fcl_2 = Dense(units=1024, activation=relu)(flat_2)
 do_2 = Dropout(rate=0.7)(fcl_2)
 output_2 = Dense(units=10, activation=softmax, name="Second Output")
+
+# Defining inception module number 7
+inc_7 = build_inception_module(inc_6, 256, 160, 32, 320, 128, 128)
+# Max pooling
+mp_4 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(inc_7)
