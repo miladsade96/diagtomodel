@@ -68,3 +68,13 @@ output_1 = Dense(units=10, activation=softmax, name="First Output")
 inc_4 = build_inception_module(inc_3, 160, 112, 24, 224, 64, 64)
 inc_5 = build_inception_module(inc_4, 128, 128, 24, 265, 64, 64)
 inc_6 = build_inception_module(inc_5, 112, 144, 32, 288, 64, 64)
+
+# Implementing second output branch
+# Average pool
+ap_2 = AveragePooling2D(pool_size=(5, 5), strides=3)(inc_6)
+conv_5 = Conv2D(filters=128, kernel_size=(1, 1), activation=relu, padding="same")(ap_2)
+flat_2 = Flatten()(conv_5)
+# fully connected layer
+fcl_2 = Dense(units=1024, activation=relu)(flat_2)
+do_2 = Dropout(rate=0.7)(fcl_2)
+output_2 = Dense(units=10, activation=softmax, name="Second Output")
