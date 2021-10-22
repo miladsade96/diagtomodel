@@ -7,7 +7,7 @@
 from tensorflow.keras.models import Model
 from tensorflow.keras.activations import relu, softmax
 from tensorflow.keras.layers import (Conv2D, Dense, Flatten, AveragePooling2D, MaxPooling2D,
-                                     Input, Concatenate, Dropout)
+                                     Input, Concatenate, Dropout, GlobalAveragePooling2D)
 
 
 def build_inception_module(pl, nf_11: int, nf_33_r: int, nf_55_r: int, nf_33: int,
@@ -62,7 +62,7 @@ flat_1 = Flatten()(conv_4)
 # fully connected layer
 fcl_1 = Dense(units=1024, activation=relu)(flat_1)
 do_1 = Dropout(rate=0.7)(fcl_1)
-output_1 = Dense(units=10, activation=softmax, name="First Output")
+output_1 = Dense(units=10, activation=softmax, name="First Output")(do_1)
 
 # Defining triple inception modules
 inc_4 = build_inception_module(inc_3, 160, 112, 24, 224, 64, 64)
@@ -77,7 +77,7 @@ flat_2 = Flatten()(conv_5)
 # fully connected layer
 fcl_2 = Dense(units=1024, activation=relu)(flat_2)
 do_2 = Dropout(rate=0.7)(fcl_2)
-output_2 = Dense(units=10, activation=softmax, name="Second Output")
+output_2 = Dense(units=10, activation=softmax, name="Second Output")(do_2)
 
 # Defining inception module number 7
 inc_7 = build_inception_module(inc_6, 256, 160, 32, 320, 128, 128)
@@ -87,3 +87,9 @@ mp_4 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(inc_7)
 # Defining double inception modules
 inc_8 = build_inception_module(mp_4, 256, 160, 32, 320, 128, 128)
 inc_9 = build_inception_module(inc_8, 384, 192, 48, 384, 128, 128)
+
+# Implementing third output branch
+# Global Average Pooling
+gap_1 = GlobalAveragePooling2D()(inc_9)
+do_3 = Dropout(rate=0.4)(gap_1)
+output_3 = Dense(units=10, activation=softmax, name="Third Output")(do_3)
