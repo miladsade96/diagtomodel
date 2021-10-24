@@ -26,5 +26,5 @@
 * [LeNet-5](models/lenet_5/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
 * [AlexNet](models/alexnet/alexnet.py) - ImageNet Classification with Deep Convolutional
 Neural Networks
-* [VGG-16](models/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
+* [VGG-16](models/vgg_16/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
 * [Inception-v1](models/inception_v1/inception-v1.py) - Going Deeper With Convolutions
