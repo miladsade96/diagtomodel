@@ -21,10 +21,10 @@
 * List of [all contributors](https://github.com/EverLookNeverSee/diag2model/graphs/contributors) to this repository
 
 ## Implemented Models
-* [PLNet](all/pl_net.py) - Convolutional Neural Network with Parallel Layers
-* [MLANet](all/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
-* [LeNet-5](all/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
-* [AlexNet](all/alexnet.py) - ImageNet Classification with Deep Convolutional
+* [PLNet](models/pl_net.py) - Convolutional Neural Network with Parallel Layers
+* [MLANet](models/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
+* [LeNet-5](models/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
+* [AlexNet](models/alexnet.py) - ImageNet Classification with Deep Convolutional
 Neural Networks
-* [VGG-16](all/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
-* [Inception-v1](all/inception-v1.py) - Going Deeper With Convolutions
+* [VGG-16](models/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
+* [Inception-v1](models/inception-v1.py) - Going Deeper With Convolutions
