@@ -30,7 +30,7 @@ propose changes to the codebase.
 **If you are beginner in contributing to open source, use [this tutorial](https://medium.com/@d.kang/git-workflow-for-projects-cheat-sheet-35c3e51fb07c)**  
 
 
-## Reporting the bugs
+## Reporting the Bugs
 
 We use GitHub issues to track public bugs, report a bug by [opening a new issue](https://github.com/EverLookNeverSee/diag2model/issues/new)  
 Great bug report tend to have:
@@ -40,6 +40,11 @@ Great bug report tend to have:
   * Give sample code if you can
 * What you expected would happen
 * what actually happens
+
+
+## Coding Style
+
+We use Python PEP-8 style guide, for more details please review [this link](https://www.python.org/dev/peps/pep-0008/)
 
 
 ## License
