@@ -30,7 +30,20 @@ propose changes to the codebase.
 **If you are beginner in contributing to open source, use [this tutorial](https://medium.com/@d.kang/git-workflow-for-projects-cheat-sheet-35c3e51fb07c)**  
 
 
+## Reporting the bugs
+
+We use GitHub issues to track public bugs, report a bug by [opening a new issue](https://github.com/EverLookNeverSee/diag2model/issues/new)  
+Great bug report tend to have:
+* A quick summary and/or background
+* Steps to reproduce:
+  * Be specific
+  * Give sample code if you can
+* What you expected would happen
+* what actually happens
+
+
 ## License
+
 In short, when you submit code changes, your submissions are understood to be
 under the same [MIT](https://en.wikipedia.org/wiki/MIT_License) that covers
 the project.
