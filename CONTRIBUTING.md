@@ -8,6 +8,7 @@ transparent as possible, whether it's:
 * Proposing a new feature
 * etc
 
+
 ## We Develop with GitHub
 
 We use GitHub to host code, to track issues and feature requests, as well as
@@ -15,6 +16,7 @@ accept pull requests.
 We use [GitHub Flow](https://guides.github.com/introduction/flow/), so all 
 code changes happen through pull requests. Pull requests are the best way to 
 propose changes to the codebase.
+
 
 ## How To Contribute
 
@@ -26,3 +28,9 @@ propose changes to the codebase.
 * Check out model summary to make sure whether it is implemented correctly or not
 * Submit your pull request  
 **If you are beginner in contributing to open source, use [this tutorial](https://medium.com/@d.kang/git-workflow-for-projects-cheat-sheet-35c3e51fb07c)**  
+
+
+## License
+In short, when you submit code changes, your submissions are understood to be
+under the same [MIT](https://en.wikipedia.org/wiki/MIT_License) that covers
+the project.
