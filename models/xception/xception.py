@@ -20,7 +20,7 @@ for filters in [128, 256, 728]:
         outputs = Activation("relu")(outputs)
         outputs = SeparableConv2D(filters=filters, kernel_size=(3, 3), padding="same", use_bias=False)(outputs)
         outputs = BatchNormalization()(outputs)
-    outputs = MaxPool2D(pool_size=(3, 3), strides=(2, 2),padding="same")(outputs)
+    outputs = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding="same")(outputs)
     outputs = Add()([res, outputs])
 
 # Middle flow
@@ -58,3 +58,6 @@ outputs = Dense(units=1000)(outputs)
 outputs = Activation("softmax")(outputs)
 
 model = Model(inputs=inputs, outputs=outputs, name="Xception")
+
+if __name__ == '__main__':
+    model.summary()
