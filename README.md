@@ -28,3 +28,4 @@
 Neural Networks
 * [VGG-16](models/vgg_16/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
 * [Inception-v1](models/inception_v1/inception-v1.py) - Going Deeper With Convolutions
+* [Xception](models/xception/xception.py) - Deep Learning with Depthwise Separable Convolutions
