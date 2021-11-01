@@ -36,7 +36,8 @@ def convolutional_unit(
         A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
 
     """
-    assert conv_layer in ["Conv2D", "SeparableConv2D"], "conv_layer must be either Conv2D or SeparableConv2D"
+    if conv_layer not in ["Conv2D", "SeparableConv2D"]:
+        raise ValueError(f"conv_layer must be either Conv2D or SeparableConv2D. Found {conv_layer}")
 
     if pre_activation:
         conv_inputs = Activation("relu")(conv_inputs)
