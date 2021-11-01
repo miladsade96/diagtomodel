@@ -11,31 +11,21 @@ from tensorflow.keras.layers import (Activation, Add, BatchNormalization, Conv2D
                                      MaxPool2D, SeparableConv2D)
 
 
-def convolutional_unit(
-        conv_inputs: Tensor,
-        num_filters: int,
-        kernel_size: tuple[int, int],
-        strides: tuple[int, int] = (1, 1),
-        pre_activation: bool = False,
-        post_activation: bool = True,
-        conv_layer: str = "Conv2D") -> Tensor:
-    """Convolutional Unit
-
+def convolutional_unit(conv_inputs: Tensor, num_filters: int, kernel_size: tuple[int, int],
+                       strides: tuple[int, int] = (1, 1), pre_activation: bool = False, post_activation: bool = True,
+                       conv_layer: str = "Conv2D") -> Tensor:
+    """
+    Convolutional Unit
     Passes the input tensor through a convolutional layer, and a batch-normalization layer.
     Also performs any combination of pre/post relu activation, depending on parameters passed.
-
-    Args:
-        conv_inputs: Input tensor
-        num_filters: Number of filters to use in the convolutional layer
-        kernel_size: Kernel size for the convolutional layer
-        strides: Strides size for the convolutional layer
-        pre_activation: Whether or not to perform activation before the convolutional layer. False by default.
-        post_activation: Whether or not to perform activation after the batch-normalization layer. True by default.
-        conv_layer: The type of Convolutional layer to use. Should be either Conv2D or SeparableConv2D
-
-    Returns:
-        A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
-
+    :param conv_inputs: Input tensor
+    :param num_filters: Number of filters to use in the convolutional layer
+    :param kernel_size: Kernel size for the convolutional layer
+    :param strides: Strides size for the convolutional layer
+    :param pre_activation:  Whether or not to perform activation before the convolutional layer, False by default.
+    :param post_activation: Whether or not to perform activation after the batch-normalization layer, True by default.
+    :param conv_layer: The type of Convolutional layer to use. Should be either Conv2D or SeparableConv2D
+    :return: A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
     """
     if conv_layer not in ["Conv2D", "SeparableConv2D"]:
         raise ValueError(f"conv_layer must be either Conv2D or SeparableConv2D. Found {conv_layer}")
