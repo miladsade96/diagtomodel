@@ -3,12 +3,10 @@
     Paper: https://arxiv.org/abs/1610.02357
     Author: Prakhar Srivastava - @prkhrsrvstv1
 """
-from typing import Type
 
 from tensorflow.keras.layers import (Activation, Add, BatchNormalization, Conv2D, Dense, GlobalAveragePooling2D, Input,
                                      MaxPool2D, SeparableConv2D)
 from tensorflow.keras.models import Model
-from tensorflow.python.keras.layers.convolutional import Conv
 from tensorflow.python.types.core import Tensor
 
 
@@ -19,7 +17,7 @@ def convolutional_unit(
         strides: tuple[int, int] = (1, 1),
         pre_activation: bool = False,
         post_activation: bool = True,
-        conv_layer: Type[Conv] = Conv2D) -> Tensor:
+        conv_layer: str = "Conv2D") -> Tensor:
     """Convolutional Unit
 
     Passes the input tensor through a convolutional layer, and a batch-normalization layer.
@@ -38,11 +36,21 @@ def convolutional_unit(
         A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
 
     """
+    assert conv_layer in ["Conv2D", "SeparableConv2D"], "conv_layer must be either Conv2D or SeparableConv2D"
+
     if pre_activation:
         conv_inputs = Activation("relu")(conv_inputs)
-    conv_outputs = conv_layer(filters=num_filters, kernel_size=kernel_size, strides=strides, padding="same",
+    conv_outputs = conv_inputs
+
+    if conv_layer == "Conv2D":
+        conv_outputs = Conv2D(filters=num_filters, kernel_size=kernel_size, strides=strides, padding="same",
                               use_bias=False)(conv_inputs)
+    elif conv_layer == "SeparableConv2D":
+        conv_outputs = SeparableConv2D(filters=num_filters, kernel_size=kernel_size, strides=strides, padding="same",
+                                       use_bias=False)(conv_inputs)
+
     conv_outputs = BatchNormalization()(conv_outputs)
+
     if post_activation:
         conv_outputs = Activation("relu")(conv_outputs)
     return conv_outputs
@@ -68,7 +76,7 @@ def separable_convolutional_unit(
         A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
     """
     return convolutional_unit(sep_conv_inputs, num_filters, (3, 3), pre_activation=pre_activation,
-                              post_activation=post_activation, conv_layer=SeparableConv2D)
+                              post_activation=post_activation, conv_layer="SeparableConv2D")
 
 
 def entry_flow(entry_inputs: Input) -> Tensor:
