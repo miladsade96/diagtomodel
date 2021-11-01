@@ -86,16 +86,12 @@ def entry_flow(entry_inputs: Input) -> Tensor:
 
 
 def middle_flow(middle_inputs: Tensor) -> Tensor:
-    """Middle Flow
-
+    """
+    Middle flow
     Implements the second of the three broad parts of the model
-
-    Args:
-        middle_inputs: Tensor output generate by the Entry Flow, having shape [*, new_rows, new_cols, 728]
-
-    Returns:
-        Output tensor of shape [*, new_rows, new_cols, 728]
-
+    :param middle_inputs: middle_inputs: Tensor output generate by the Entry Flow,
+                                         having shape [*, new_rows, new_cols, 728]
+    :return: Output tensor of shape [*, new_rows, new_cols, 728]
     """
     # Block 4 - Conv B (Green)
     middle_outputs = middle_inputs
