@@ -65,16 +65,11 @@ def separable_convolutional_unit(sep_conv_inputs: Tensor, num_filters: int, pre_
 
 
 def entry_flow(entry_inputs: Input) -> Tensor:
-    """Entry Flow
-
+    """
+    Entry flow
     Implements the first of the three broad parts of the model
-
-    Args:
-        entry_inputs: Input tensor of shape [*, rows, cols, channels]
-
-    Returns:
-        Output tensor of shape [*, new_rows, new_cols, 728]
-
+    :param entry_inputs: Input tensor of shape [*, rows, cols, channels]
+    :return: Output tensor of shape [*, new_rows, new_cols, 728]
     """
     # Block 2 (Red)
     entry_outputs = convolutional_unit(entry_inputs, 32, (3, 3), (2, 2))
