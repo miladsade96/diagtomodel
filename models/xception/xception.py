@@ -4,10 +4,11 @@
     Author: Prakhar Srivastava - @prkhrsrvstv1
 """
 
-from tensorflow.keras.layers import (Activation, Add, BatchNormalization, Conv2D, Dense, GlobalAveragePooling2D, Input,
-                                     MaxPool2D, SeparableConv2D)
+
 from tensorflow.keras.models import Model
 from tensorflow.python.types.core import Tensor
+from tensorflow.keras.layers import (Activation, Add, BatchNormalization, Conv2D, Dense, GlobalAveragePooling2D, Input,
+                                     MaxPool2D, SeparableConv2D)
 
 
 def convolutional_unit(
