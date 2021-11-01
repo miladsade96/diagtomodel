@@ -48,24 +48,17 @@ def convolutional_unit(conv_inputs: Tensor, num_filters: int, kernel_size: tuple
     return conv_outputs
 
 
-def separable_convolutional_unit(
-        sep_conv_inputs: Tensor,
-        num_filters: int,
-        pre_activation: bool = True,
-        post_activation: bool = False) -> Tensor:
-    """Separable Convolutional Unit
-
+def separable_convolutional_unit(sep_conv_inputs: Tensor, num_filters: int, pre_activation: bool = True,
+                                 post_activation: bool = False) -> Tensor:
+    """
+    Separable Convolutional Unit
     Uses the Convolutional Unit (`convolutional_unit`) function to pass the input tensor through a Separable
     Convolutional layer. Also performs any combination of pre/post relu activation, depending on parameters passed.
-
-    Args:
-        sep_conv_inputs: Input tensor
-        num_filters: Number of filters to use in the convolutional layer
-        pre_activation: Whether or not to perform activation before the convolutional layer. True by default.
-        post_activation: Whether or not to perform activation after the batch-normalization layer. False by default.
-
-    Returns:
-        A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
+    :param sep_conv_inputs: sep_conv_inputs: Input tensor
+    :param num_filters: Number of filters to use in the convolutional layer
+    :param pre_activation: Whether or not to perform activation before the convolutional layer, True by default.
+    :param post_activation: Whether or not to perform activation after the batch-normalization layer. False by default.
+    :return: A 4+D Tensor obtained after passing through activation, convolutional, and batch-normalization layers
     """
     return convolutional_unit(sep_conv_inputs, num_filters, (3, 3), pre_activation=pre_activation,
                               post_activation=post_activation, conv_layer="SeparableConv2D")
