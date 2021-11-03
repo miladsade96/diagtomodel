@@ -21,14 +21,14 @@
 * List of [all contributors](https://github.com/EverLookNeverSee/diag2model/graphs/contributors) to this repository
 
 ## Implemented Models
-* [PLNet](models/pl_net/pl_net.py) - Convolutional Neural Network with Parallel Layers
-* [MLANet](models/mla_net/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
-* [LeNet-5](models/lenet_5/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
-* [AlexNet](models/alexnet/alexnet.py) - ImageNet Classification with Deep Convolutional
+* [PLNet](diag2model/pl_net/pl_net.py) - Convolutional Neural Network with Parallel Layers
+* [MLANet](diag2model/mla_net/mla_net.py) - Convolutional Neural Network with Multiple Layer Additions
+* [LeNet-5](diag2model/lenet_5/lenet-5.py) - Gradient-Based Learning Applied to Document Recognition
+* [AlexNet](diag2model/alexnet/alexnet.py) - ImageNet Classification with Deep Convolutional
 Neural Networks
-* [VGG-16](models/vgg_16/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
-* [Inception-v1](models/inception_v1/inception-v1.py) - Going Deeper With Convolutions
-* [Xception](models/xception/xception.py) - Deep Learning with Depthwise Separable Convolutions
+* [VGG-16](diag2model/vgg_16/vgg-16.py) - Very Deep Convolutional Networks For Large Scale Image Recognition
+* [Inception-v1](diag2model/inception_v1/inception-v1.py) - Going Deeper With Convolutions
+* [Xception](diag2model/xception/xception.py) - Deep Learning with Depthwise Separable Convolutions
 
 
 ## License
