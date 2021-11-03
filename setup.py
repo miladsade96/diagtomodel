@@ -1,7 +1,7 @@
 import setuptools
 
 
-with open("README.md", "r", encoding="uft-8") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -21,7 +21,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={""},
-    packages=setuptools.find_packages(where=""),
     python_requires=">=3.9"
 )
