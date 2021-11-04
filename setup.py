@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="diag2model",
+    name="diagtomodel",
     version="0.3.1",
     author="Milad Sadeghi DM",
     author_email="EverLookNeverSee@ProtonMail.ch",
