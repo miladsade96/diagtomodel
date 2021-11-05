@@ -1,24 +1,24 @@
 ![](logo.png)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/everlookneversee/diag2model/badge)](https://www.codefactor.io/repository/github/everlookneversee/diag2model)
+[![CodeFactor](https://www.codefactor.io/repository/github/everlookneversee/diagtomodel/badge)](https://www.codefactor.io/repository/github/everlookneversee/diagtomodel)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-[![CodeQL](https://github.com/EverLookNeverSee/diag2model/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/EverLookNeverSee/diag2model/actions/workflows/codeql-analysis.yml)
-![GitHub language count](https://img.shields.io/github/languages/count/EverLookNeverSee/diag2model)
-![GitHub top language](https://img.shields.io/github/languages/top/EverLookNeverSee/diag2model)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/EverLookNeverSee/diag2model)
-![Lines of code](https://img.shields.io/tokei/lines/github/EverLookNeverSee/diag2model)
-![GitHub all releases](https://img.shields.io/github/downloads/EverLookNeverSee/diag2model/total)
-![GitHub issues](https://img.shields.io/github/issues-raw/EverLookNeverSee/diag2model)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/EverLookNeverSee/diag2model)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/EverLookNeverSee/diag2model)
-![GitHub contributors](https://img.shields.io/github/contributors/EverLookNeverSee/diag2model)
-![GitHub last commit](https://img.shields.io/github/last-commit/EverLookNeverSee/diag2model)
+[![CodeQL](https://github.com/EverLookNeverSee/diag2model/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/EverLookNeverSee/diagtomodel/actions/workflows/codeql-analysis.yml)
+![GitHub language count](https://img.shields.io/github/languages/count/EverLookNeverSee/diagtomodel)
+![GitHub top language](https://img.shields.io/github/languages/top/EverLookNeverSee/diagtomodel)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/EverLookNeverSee/diagtomodel)
+![Lines of code](https://img.shields.io/tokei/lines/github/EverLookNeverSee/diagtomodel)
+![GitHub all releases](https://img.shields.io/github/downloads/EverLookNeverSee/diagtomodel/total)
+![GitHub issues](https://img.shields.io/github/issues-raw/EverLookNeverSee/diagtomodel)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/EverLookNeverSee/diagtomodel)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/EverLookNeverSee/diagtomodel)
+![GitHub contributors](https://img.shields.io/github/contributors/EverLookNeverSee/diagtomodel)
+![GitHub last commit](https://img.shields.io/github/last-commit/EverLookNeverSee/diagtomodel)
 
 ### Implementations of Artificial Neural Networks Based on their Diagrams
 
 ## Authors
 * Milad Sadeghi DM - [EverlookNeverSee@GitHub](https://github.com/EverLookNeverSee)
-* List of [all contributors](https://github.com/EverLookNeverSee/diag2model/graphs/contributors) to this repository
+* List of [all contributors](https://github.com/EverLookNeverSee/diagtomodel/graphs/contributors) to this repository
 
 ## Implemented Models
 * [PLNet](diagtomodel/pl_net/pl_net.py) - Convolutional Neural Network with Parallel Layers
