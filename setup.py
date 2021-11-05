@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="diagtomodel",
-    version="0.3.2",
+    version="0.3.3",
     author="Milad Sadeghi DM",
     author_email="EverLookNeverSee@ProtonMail.ch",
     description="Implementations of Artificial Neural Networks Based on their Diagrams",
