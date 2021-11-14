@@ -5,14 +5,15 @@
 """
 
 
+from typing import Tuple
 from tensorflow.keras.models import Model
 from tensorflow.python.types.core import Tensor
 from tensorflow.keras.layers import (Activation, Add, BatchNormalization, Conv2D, Dense, GlobalAveragePooling2D, Input,
                                      MaxPool2D, SeparableConv2D)
 
 
-def convolutional_unit(conv_inputs: Tensor, num_filters: int, kernel_size: tuple[int, int],
-                       strides: tuple[int, int] = (1, 1), pre_activation: bool = False, post_activation: bool = True,
+def convolutional_unit(conv_inputs: Tensor, num_filters: int, kernel_size: Tuple[int, int],
+                       strides: Tuple[int, int] = (1, 1), pre_activation: bool = False, post_activation: bool = True,
                        conv_layer: str = "Conv2D") -> Tensor:
     """
     Convolutional Unit
